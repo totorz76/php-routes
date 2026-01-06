@@ -1,13 +1,13 @@
 <?php
 include 'functions.php';
+require 'routes.php';
 
-$page = $_GET ['page'] ?? 'home';
+// $page = isset($_GET['page']) ? $_GET['page'] : 'home';
+// $page = $_GET ['page'] ?? 'home';
+$page = filter_input(INPUT_GET, 'page', FILTER_SANITIZE_FULL_SPECIAL_CHARS) ?? 'home';
+$page = $pageFiltrer ?? 'home';
 
-$routes= [
-    'contact' => 'contact.php',
-    'about' => 'about.php',
-    'home' => 'home.php'
-];
+
 
 if (!array_key_exists($page, $routes)) {
     redirect( '404.php');
