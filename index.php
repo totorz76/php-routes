@@ -19,5 +19,5 @@ redirect($routes[$page]);
 http://localhost/php-routes/index.php?page=contact
 http://localhost/php-routes/index.php?page=about
 http://localhost/php-routes/index.php?page=prix
-
+http://localhost/php-routes/?page=edit&id=45
 */
